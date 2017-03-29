@@ -1,0 +1,30 @@
+button{
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 8px 15px;
+  box-shadow: none;
+}
+.body_output{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.bodyColor{
+  background-color: #F6F6F6;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bodyfront{
+  width: 50%;
+  padding: 20px;
+  background-color: #F6F6F6;
+  margin: 20px 0;
+}
+.bodyInfoOutput{
+  padding: 20px;
+
+}
+.bodyInfoOutput button{
+  margin: 0 10px 10px 0;
+}

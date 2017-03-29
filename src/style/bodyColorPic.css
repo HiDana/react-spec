@@ -1,0 +1,25 @@
+.bodyColorPic{
+  width: 160px;
+  height: 180px;
+  margin: 17px;
+  box-shadow: 0 2px 4px #777;
+  transition: .2s;
+}
+.bodyColorPic:hover{
+  box-shadow: 0 1px 2px #aaa;
+  transition: .2s;
+}
+.pic{
+  height: 60px;
+  color: #fff;
+  /*background-color: #4472CA;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bodyColorPic1{
+  opacity: .4;
+}
+.bodyColorPic2{
+  opacity: .6;
+}
