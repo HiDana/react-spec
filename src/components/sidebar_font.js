@@ -1,12 +1,36 @@
 import React,{ Component } from 'react';
+import _ from 'lodash'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fontSet } from './actions/index'
 
 
-export default class SidebarFont extends Component{
+class SidebarFont extends Component{
+  fontSetChange = (innerText) => {
+    const colorText = innerText.target.value
+    const result=[];
+    colorText.split(';').forEach(
+      function(obj,index) {
+        result.push({
+          name: obj.split(':')[0],
+          size: obj.split(':')[1]
+        })
+      }
+    )
+    const resultArray = _.take(result, result.length-1)
+    this.props.fontSet(resultArray)
+  }
   render(){
     return(
-      <div className="sidebarComponent">
-        <textarea placeholder="text font"></textarea>
+      <div className="sidebarComponent" id="sidebar_font">
+        <textarea placeholder="text font" onChange={this.fontSetChange}>$font_1: 36px;$font_2: 34px;$font_3: 28px;$font_4: 24px;</textarea>
       </div>
     );
   }
 }
+
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fontSet }, dispatch);
+}
+export default connect( null, mapDispatchToProps)(SidebarFont);

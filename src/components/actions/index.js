@@ -4,3 +4,9 @@ export function colorSet(newColor){
     colorSet: newColor
   };
 }
+export function fontSet(newFont){
+  return {
+    type: 'FONT_SET',
+    fontSet: newFont
+  };
+}

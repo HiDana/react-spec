@@ -20,6 +20,7 @@ button{
   padding: 20px;
   background-color: #F6F6F6;
   margin: 20px 0;
+  display: none;
 }
 .bodyInfoOutput{
   padding: 20px;

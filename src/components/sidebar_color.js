@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import _ from 'lodash'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { colorSet } from './actions/index'
@@ -16,15 +17,15 @@ class SidebarColor extends Component{
         })
       }
     )
-    console.log('result', result);
-    this.props.colorSet(result)
+    const resultArray = _.take(result, result.length-1)
+    this.props.colorSet(resultArray)
   }
-  
+
 
   render(){
     return(
-      <div className="sidebarComponent">
-        <textarea placeholder="text color" onChange={this.colorSetChange}>$color_black: #222;$color_red: #a00;$color_blue: #00a;</textarea>
+      <div className="sidebarComponent" id="sidebar_color">
+        <textarea placeholder="text color" onChange={this.colorSetChange}>$color_1: #4472CA;$color_2: #5E7CE2;$color_3: #92B4F4;$color_4: #CFDEE7;</textarea>
       </div>
     );
   }
