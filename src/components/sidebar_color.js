@@ -19,13 +19,18 @@ class SidebarColor extends Component{
     )
     const resultArray = _.take(result, result.length-1)
     this.props.colorSet(resultArray)
+    document.getElementById("sidebar_color").appendChild(document.createElement("style")).innerHTML = `#sidebar_color:before {background: ${resultArray[0].color};}`
+    document.getElementById("sidebar_font").appendChild(document.createElement("style")).innerHTML = `#sidebar_font:before {background: ${resultArray[1].color};}`
+    document.getElementById("sidebar_color").style.borderColor=resultArray[0].color
+    document.getElementById("sidebar_font").style.borderColor=resultArray[1].color
   }
 
 
   render(){
     return(
       <div className="sidebarComponent" id="sidebar_color">
-        <textarea placeholder="text color" onChange={this.colorSetChange}>$color_1: #4472CA;$color_2: #5E7CE2;$color_3: #92B4F4;$color_4: #CFDEE7;</textarea>
+        {/*<textarea placeholder="text color" onChange={this.colorSetChange}>$color_1: #4472CA;$color_2: #5E7CE2;$color_3: #92B4F4;$color_4: #CFDEE7;</textarea>*/}
+        <textarea placeholder="$color_1: #4472CA;" onChange={this.colorSetChange}></textarea>
       </div>
     );
   }

@@ -6,6 +6,12 @@ import { fontSet } from './actions/index'
 
 
 class SidebarFont extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+  }
   fontSetChange = (innerText) => {
     const colorText = innerText.target.value
     const result=[];
@@ -23,7 +29,8 @@ class SidebarFont extends Component{
   render(){
     return(
       <div className="sidebarComponent" id="sidebar_font">
-        <textarea placeholder="text font" onChange={this.fontSetChange}>$font_1: 36px;$font_2: 34px;$font_3: 28px;$font_4: 24px;</textarea>
+        {/*<textarea placeholder="text font" onChange={this.fontSetChange}>$font_1: 36px;$font_2: 34px;$font_3: 28px;$font_4: 24px;</textarea>*/}
+        <textarea placeholder="$font_1: 36px;" onChange={this.fontSetChange}></textarea>
       </div>
     );
   }
