@@ -6,6 +6,9 @@ button{
   transition: .2s;
   color: #666;
 }
+button:focus {
+  outline: none;
+}
 button:hover{
   background-color: #c6e5d9;
   border: 1px solid #ccc;

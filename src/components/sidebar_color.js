@@ -19,10 +19,18 @@ class SidebarColor extends Component{
     )
     const resultArray = _.take(result, result.length-1)
     this.props.colorSet(resultArray)
-    document.getElementById("sidebar_color").appendChild(document.createElement("style")).innerHTML = `#sidebar_color:before {background: ${resultArray[0].color};}`
-    document.getElementById("sidebar_font").appendChild(document.createElement("style")).innerHTML = `#sidebar_font:before {background: ${resultArray[1].color};}`
-    document.getElementById("sidebar_color").style.borderColor=resultArray[0].color
-    document.getElementById("sidebar_font").style.borderColor=resultArray[1].color
+    // console.log(resultArray.length);
+    if (resultArray.length === 1 ) {
+      document.getElementById("sidebar_color").appendChild(document.createElement("style")).innerHTML = `#sidebar_color:before {background: ${resultArray[0].color};}`
+      document.getElementById("sidebar_color").style.borderColor=resultArray[0].color
+
+    }else if (resultArray.length>1) {
+      document.getElementById("sidebar_color").appendChild(document.createElement("style")).innerHTML = `#sidebar_color:before {background: ${resultArray[0].color};}`
+      document.getElementById("sidebar_color").style.borderColor=resultArray[0].color
+      document.getElementById("sidebar_font").appendChild(document.createElement("style")).innerHTML = `#sidebar_font:before {background: ${resultArray[1].color};}`
+      document.getElementById("sidebar_font").style.borderColor=resultArray[1].color
+    }
+
   }
 
 

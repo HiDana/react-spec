@@ -11,10 +11,10 @@ export default class Body extends Component{
   render(){
     return(
       <div className="bodyInside">
-        <BodyOutput />
+        {/*<BodyOutput />*/}
         <BodyColor />
         <BodyFont />
-        <BodyInfoOutput />
+        {/*<BodyInfoOutput />*/}
       </div>
     );
   }
