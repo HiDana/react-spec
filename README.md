@@ -1,4 +1,4 @@
-spec [Demo](https://spec.hidana.me)
+spec [Demo](http://spec.hidana.me)
 
 
 
